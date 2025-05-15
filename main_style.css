@@ -22,8 +22,8 @@ button:hover {
 .menu_topbar p {
     color: white;
     text-align: center;
-    /*font-family: "Atma";*/
-    font-size: 15px;
+    font-family: "Iceberg";
+    font-size: 20px;
 }
 
 .menu_sidebar {
@@ -272,12 +272,17 @@ button:hover {
   margin: auto;
 }
 
+.details_info a {
+  font-size: 10px;
+}
+
+
 .details_info table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .details_info #table_item {
@@ -295,9 +300,10 @@ button:hover {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin: 10px;
 }
 
-#PO {
+#APPROVAL {
   background: conic-gradient(
       #cc9704 0% 25%,
       #e0e0e0 25% 100%
@@ -311,10 +317,24 @@ button:hover {
   );
 }
 
-#NEW {
+#PR {
   background: conic-gradient(
       #0465cc 0% 30%,
       #e0e0e0 30% 100%
+  );
+}
+
+#PO {
+  background: conic-gradient(
+      #00760e 0% 50%,
+      #e0e0e0 50% 100%
+  );
+}
+
+#RELEASE {
+  background: conic-gradient(
+      #5c0066 0% 80%,
+      #e0e0e0 80% 100%
   );
 }
 
@@ -325,7 +345,7 @@ button:hover {
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  background-color: #f0f0f0;
+  background-color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -337,15 +357,6 @@ button:hover {
   font-weight: bold;
   color: #333;
 }
-
-.home_circle::before {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
 
 .home_status_view {
   display: flex;
@@ -489,9 +500,16 @@ button:hover {
     text-align: left;
 }
 
-.login_container h1 {
-    font-family: "Atma";
+.login_container h2 {
+    font-family: "Iceberg";
+    color: #004458;;
     font-size: 30px;
+    margin: 5px;
+}
+
+.login_container img {
+  width: 300px;
+  height: 40px;
 }
 
 .login_button:hover{
@@ -553,11 +571,14 @@ button:hover {
     margin: 0;
 }
 
-.register_container h1 {
-    font-family: "Atma";
+.register_container h2 {
+    font-family: "Iceberg";
+    color: #004458;;
     font-size: 30px;
     text-align: center;
+    margin: 5px;
 }
+
 
 .register_page label {
   margin: 0;

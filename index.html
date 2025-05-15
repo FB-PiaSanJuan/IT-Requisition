@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     </head>
     <body>
         <div class="menu_topbar">
@@ -33,32 +36,115 @@
         <div class="default_container">
             <div class="default_view">
                 <h2 class="home_h2">REQUISITION STATUS TRACKER</h2>
+                
                 <div class="home_status_view">
+
                     <div class="home_status">
-                        <div class="home_circle" id="PO">
+                        <div class="home_circle" id="APPROVAL">
                             <div class="home_donut">
                                 <span class="home_percentage">8</span>
                             </div>
                         </div>
-                        <h2>ON-PO</h2>
+                        <h2>FOR APPROVAL</h2>
                     </div>
+
                     <div class="home_status">
-                        <div class="home_circle" id="COMPLETE">
-                            <div class="home_donut">
-                                <span class="home_percentage">12</span>
-                            </div>
-                        </div>
-                        <h2>COMPLETED</h2>
-                    </div>
-                    <div class="home_status">
-                        <div class="home_circle" id="NEW">
+                        <div class="home_circle" id="PR">
                             <div class="home_donut">
                                 <span class="home_percentage">9</span>
                             </div>
                         </div>
-                        <h2>NEW</h2>
+                        <h2>FOR PR</h2>
+                    </div>
+
+                    <div class="home_status">
+                        <div class="home_circle" id="PO">
+                            <div class="home_donut">
+                                <span class="home_percentage">15</span>
+                            </div>
+                        </div>
+                        <h2>FOR PO</h2>
+                    </div>
+
+                    <div class="home_status">
+                        <div class="home_circle" id="RELEASE">
+                            <div class="home_donut">
+                                <span class="home_percentage">21</span>
+                            </div>
+                        </div>
+                        <h2>RELEASED</h2>
+                    </div>
+
+                    <div class="home_status">
+                        <div class="home_circle" id="COMPLETE">
+                            <div class="home_donut">
+                                <span class="home_percentage">32</span>
+                            </div>
+                        </div>
+                        <h2>COMPLETED</h2>
+                    </div>
+
+                </div>
+
+                <div class="details_info">
+                    <dotlottie-player
+                    src="https://lottie.host/5c7dc4a9-5c0d-4c88-b5c3-0bbbe5d1dbfd/ESAATHnmuK.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height:200px;"
+                    loop
+                    autoplay
+                    ></dotlottie-player>
+                    <div class="default_view" id="table_item"> 
+                        
+                        <h2> DUE REQUESTS <a href="#"> VIEW ALL </a> </h2>
+                            <table>
+                                <tr>
+                                    <th>SERIAL NUMBER</th>
+                                    <th>NAME</th>
+                                    <th>STATUS</th>
+                                    <th>DATE</th>
+                                </tr>
+                                <tr>
+                                    <td>2025-000123</td>
+                                    <td>Doe, Jane</td>
+                                    <td>For PO</td>
+                                    <td>May 14, 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-000119</td>
+                                    <td>Dela Cruz, Juan</td>
+                                    <td>For PR</td>
+                                    <td>April 31, 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-000107</td>
+                                    <td>Limpiado, Carl Diego</td>
+                                    <td>Released</td>
+                                    <td>May 06, 2025</td>
+                                </tr>
+                            </table>
+                    </div>
+
+                    <div class="default_view" id="table_item"> 
+                        <h2> NEW REQUESTS </h2>
+                            <table>
+                                <tr>
+                                    <th>SERIAL NUMBER </th>
+                                    <th>NAME</th>
+                                    <th>DATE</th>
+                                    <th>NO. OF ITEMS</th>
+                                </tr>
+                                <tr>
+                                    <td>2025-000247</td>
+                                    <td>Dela Cruz, Juan</td>
+                                    <td>June 01, 2025</td>
+                                    <td>2</td>
+                                </tr>
+                        </table>
                     </div>
                 </div>
+
             </div>
 
         </div>        
