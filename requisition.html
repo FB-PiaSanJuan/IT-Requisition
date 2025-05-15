@@ -8,7 +8,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Atma&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="menu_topbar">
@@ -22,6 +22,7 @@
             <a href="report.html">REPORTS</a>
 
             <div class="menu_userinfo">
+                <img src="images/user.png">
                 <h2>PIA</h2>
                 <h4>ADMINISTRATOR</h3>
                 <button>LOGOUT</button>
@@ -31,6 +32,7 @@
 
         <div class="default_container">
             <div class="default_view">
+
                 <h2> REQUISITIONS </h2>
 
                 <div class="default_options">
@@ -46,8 +48,9 @@
                         <button><</button>
                         <label> 2 of 12 PAGE(S) </label>
                         <button>></button>
-                    </div>
 
+                        <button class="default_button" id="modal_button"> CREATE NEW </button>
+                    </div>
                 </div>
 
                 <table>
@@ -174,28 +177,98 @@
                         <td><a href="">VIEW</a></td>
                     </tr>
 
-                    <tr>
-                        <td>2025-000121</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
-                    </tr>
-                    <tr>
-                        <td>2025-000122</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
-                    </tr>
-
-
                 </table>
             </div>
-        </div>        
+        </div>    
+        
+        <!-- The Modal -->
+        <div id="modal_id" class="modal_view">
 
+            <!-- Modal content -->
+            <div class="modal_content">
+                <span class="modal_close">&times;</span>
+
+                <h2> IT Requisition Form</h2>
+                <div class="requisition_form">
+                    <label> REQUESTED BY: San Juan, Pia Laica </label> <br> <br>
+
+                    <label> DATE: </label> <br> <input type="date" date="MM-DD-YYYY"> <br> <br>
+                    <label> ITEM(S) TO REQUEST: </label> <br> 
+                    <input type="text" placeholder="Item Description"> <br>
+                    <input type="number" placeholder="Qty"> <br>
+
+                    <button class="add-button" onclick="addFn()">ADD ITEM</button>
+                    <div id="inputFields"></div>
+
+                    <br><br>
+                    <label> AUTHORIZED BY: </label> <br> <input type="search"><br>
+                    <input type="file"> 
+                    <br>
+
+                    <a href="" onclick="alertMessage('Your request has been submitted.')"> SUBMIT REQUEST </a> <br>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("modal_id");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("modal_button");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("modal_close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+        </script>
+
+        
+       <script>
+        // Add fields
+        function addFn() {
+            const divEle = document.getElementById("inputFields");
+            const wrapper = document.createElement("div");
+            const iFeild = document.createElement("input");
+            iFeild.setAttribute("type", "text");
+            iFeild.setAttribute("placeholder", "Item Description");
+            iFeild.classList.add("input-field");
+            wrapper.appendChild(iFeild);
+            divEle.appendChild(wrapper);
+
+            const divEle2 = document.getElementById("inputFields");
+            const wrapper2 = document.createElement("div");
+            const iFeild2 = document.createElement("input");
+            iFeild2.setAttribute("type", "number");
+            iFeild2.setAttribute("placeholder", "Qty");
+            iFeild2.classList.add("input-field");
+            wrapper.appendChild(iFeild2);
+            divEle.appendChild(wrapper2);
+        }
+        </script>
+
+        <script>
+            function alertMessage(message) {
+            alert(message);
+            }
+        </script>
 
 
 
