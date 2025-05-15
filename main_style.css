@@ -1,0 +1,494 @@
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+input:focus {
+  outline: none;
+}
+
+/*-------------------- NAVIGATION -----------------------------------*/
+
+.menu_topbar {
+    overflow: hidden;
+    background-color: #004458;
+    padding: 10px;
+}
+
+.menu_topbar p {
+    color: white;
+    text-align: center;
+    /*font-family: "Atma";*/
+    font-size: 15px;
+}
+
+.menu_sidebar {
+    margin: 10px;
+    padding: 0;
+    width: 10%;
+    position: fixed;
+    height: 90%;
+    overflow: auto;
+    border-radius: 1rem;
+
+        /* Glass-like effect */
+    background: rgba(255, 255, 255, 0.7);  /* 0.5 - opacity */
+     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  
+  .menu_sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+   
+  .menu_sidebar a.active {
+    background-color: #004458;
+    color: white;
+  }
+  
+  .menu_sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  .menu_userinfo {
+    position: absolute; 
+    bottom: 0;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .menu_userinfo button {
+    width: 100px;
+    height: 30px;
+    background-color: #004458;
+    border-color: transparent;
+    border-radius: 5px;
+    color: white;
+    margin: 2px;
+  }
+
+  .menu_userinfo h2,h4 {
+    margin: 0;
+  }
+
+  .menu_userinfo button:hover{
+  background-color: #005a75;
+}
+
+
+
+/*-------------------- DEFAULT PAGE -----------------------------------*/
+
+.default_page {
+    background-image: url(images/login_background.jpg);
+}
+
+.default_container {
+    height: 90%;
+    width: 88%;
+    padding: 0;
+    margin: 10px;
+    border-radius: 1rem;
+    position: absolute;
+    left: 10.5%;    
+
+    /* Glass-like effect */
+    background: rgba(255, 255, 255, 0.7);  /* 0.5 - opacity */
+     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+.default_view {
+    padding: 20px;
+}
+ .default_view table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 10px;
+}
+
+.default_view td, th {
+  border: 1px solid #004458;
+  text-align: left;
+  padding: 8px;
+}
+
+.default_view tr:nth-child(1) {
+  background-color: #004458;
+  color: white;
+}
+
+.default_view tr:hover {
+    background-color: rgb(94, 94, 94);
+    color: white;
+}
+
+.default_view tr:hover a{
+  color: white;
+}
+
+/* prevent hover color in header */
+.default_view tr:nth-child(1):hover {
+  background-color: #004458;
+  color: white;
+}
+
+.default_options {
+  padding-bottom: 10px;
+}
+
+.default_sort {
+  height: 25px;
+  width: 150px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.default_paging {
+  float: right;
+}
+
+.default_paging button {
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+/*-------------------- DETAILS PAGE -----------------------------------*/
+
+.details_view {
+  padding: 20px;
+}
+
+ .details_view table {
+  font-family: 'Roboto';
+  border-collapse: collapse;
+  width: 25%;
+}
+
+.details_view td, th {
+  border: 1px solid #004458;
+  text-align: left;
+  padding: 8px;
+}
+
+.details_view h2 {
+  padding: 0;
+}
+
+.details_status {
+  left: 50%;
+  display: flex;
+  margin: auto;
+  border: 1px solid;
+  width: 450px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.details_status_info button {
+  background-color: #004458;
+  color: white;
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.details_info {
+  display: flex;
+  margin: auto;
+}
+
+.details_info table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid;
+  font-size: 10px;
+}
+
+.details_info #table_item {
+  width: 1000px;
+}
+
+.details_info #table_info {
+  width: 1000px;
+}
+
+/*-------------------- HOME PAGE -----------------------------------*/
+
+.home_circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#PO {
+  background: conic-gradient(
+      #cc9704 0% 25%,
+      #e0e0e0 25% 100%
+  );
+}
+
+#COMPLETE {
+  background: conic-gradient(
+      #a60249 0% 75%,
+      #e0e0e0 75% 100%
+  );
+}
+
+#NEW {
+  background: conic-gradient(
+      #0465cc 0% 30%,
+      #e0e0e0 30% 100%
+  );
+}
+
+.home_donut {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.home_circle::before {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+
+.home_status_view {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.home_status {
+  padding: 15px;
+}
+
+.home_h2 {
+  background-color: #004458;
+  color: white;
+  width: 98.5%;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+
+/*-------------------- LOGIN PAGE -----------------------------------*/
+
+
+.login_page {
+    background-image: url(images/login_background.jpg);
+    background-size: cover;
+}
+
+.login_container {
+    width: 25%;
+    padding: 50px;    
+    border-radius: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    top: 25%;
+    left: 35%;
+    position: absolute;
+    
+    /* Glass-like effect */
+    background: rgba(255, 255, 255, 0.5);  /* 0.5 - opacity */
+     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+
+.login_container input, .login_button {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    border-color: transparent;
+    margin: 0.5rem;
+    font-size: medium;
+}
+
+.login_button {
+    background-color: #004458;
+    color: white;
+    padding:8px 6px;
+    margin: 5px;
+    text-align:center;
+    align-content: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.login_container label, .login_link {
+    font-size: medium;
+    margin: 0;
+    text-align: left;
+}
+
+.login_container h1 {
+    font-family: "Atma";
+    font-size: 30px;
+}
+
+.login_button:hover{
+  background-color: #005a75;
+}
+
+
+
+
+/*------------------- REGISTER PAGE ------------------------------------*/
+
+
+.register_page {
+    background-image: url(images/login_background.jpg);
+    background-size: cover;
+
+    font-family: 'Roboto';
+}
+
+.register_container {
+    width: 30%;
+    padding: 50px; 
+    border-radius: 1rem;
+    margin: 10px;
+    top: 5%;
+    left: 31%;
+    position: fixed;
+    
+    /* Glass-like effect */
+    background: rgba(255, 255, 255, 0.5);  /* 0.5 - opacity */
+     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.register_container input, .register_button {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    border-color: transparent;
+    font-size: medium;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.register_button {
+    background-color: #004458;
+    color: white;
+    padding:8px 6px;
+    text-align:center;
+    align-content: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.register_link, p {
+    font-size: medium;
+    margin: 0;
+}
+
+.register_container h1 {
+    font-family: "Atma";
+    font-size: 30px;
+    text-align: center;
+}
+
+.register_page label {
+  margin: 0;
+  padding: 0;
+}
+
+.register_button:hover{
+  background-color: #005a75;
+}
+
+
+
+/*------------------- REPORT PAGE ------------------------------------*/
+
+.report_view {
+  padding: 20px;
+}
+
+.chart_view{
+  --line-count: 10;
+  --line-color: currentcolor;
+  --line-opacity: 0.25;
+  --item-gap: 2%;
+  --item-default-color: #060606;
+  
+  height: 10rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--item-gap);
+  align-items: end;
+  padding-inline: var(--item-gap);
+  --padding-block: 1.5rem; /*space for labels*/
+  padding-block: var(--padding-block);
+  position: relative;
+  isolation: isolate;
+}
+
+.chart_view::after{
+  content: "";
+  position: absolute;
+  inset: var(--padding-block) 0;
+  z-index: -1;
+  --line-width: 1px;
+  --line-spacing: calc(100% / var(--line-count));
+  background-image: repeating-linear-gradient(to top, transparent 0 calc(var(--line-spacing) - var(--line-width)), var(--line-color) 0 var(--line-spacing));
+  box-shadow: 0 var(--line-width) 0 var(--line-color);
+  opacity: var(--line-opacity);
+}
+.chart_view > .item{
+  height: calc(1% * var(--val));
+  background-color: var(--clr, var(--item-default-color));
+  position: relative;
+  animation: item-height 1s ease forwards
+}
+@keyframes item-height { from { height: 0 } }
+
+.chart_view > .item > * { position: absolute; text-align: center }
+.chart_view > .item > .label { inset: 100% 0 auto 0 }
+.chart_view > .item > .value { inset: auto 0 100% 0 }
+
+
+
+
+
+

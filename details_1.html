@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" class="default_page">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> IT REQUISITION </title>
+        <link rel="stylesheet" href="main_style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Atma&display=swap" rel="stylesheet">
+
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    </head>
+    <body>
+        <div class="menu_topbar">
+            <p>Fully Booked IT Requisition</p>
+        </div>
+
+        <div class="menu_sidebar">
+            <a href="index.html">HOME</a>
+            <a class="active" href="">REQUISITIONS</a>
+            <a href="account.html">USER ACCOUNTS</a>
+            <a href="report.html">REPORTS</a>
+
+            <div class="menu_userinfo">
+                <h2>PIA</h2>
+                <h4>ADMINISTRATOR</h3>
+                <button>LOGOUT</button>
+            </div>
+        </div>
+
+
+        <div class="default_container">
+            <div class="details_view">
+                
+                <a class="details_back" href="requisition.html"> BACK </a> <br>
+
+                <div class="details_status">
+                    
+                    <dotlottie-player
+                    src="https://lottie.host/83e64c42-96ee-4869-a690-257b42626219/TH7KcnAsBS.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 150px; height: 150px; padding: 5px;"
+                    loop
+                    autoplay
+                    ></dotlottie-player>
+
+                    <div class="details_status_info">
+                        <h3> SERIAL #2025-000103</h3>
+                        <h2> CURRENT STATUS: ON-PO </h2>
+                        <button> UPDATE STATUS </button>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="details_info">
+
+                    <div class="default_view" id="table_info">
+                        <h2> REQUEST INFORMATION </h2>
+                        <table>
+                            <tr>
+                                <th>FIELD </th>
+                                <th>VALUE</th>
+                                <th>DATE</th>
+                                <th>NOTE</th>
+                                <th>ACTION</th>
+                            </tr>
+                            <tr>
+                                <td>Employee Name: </td>
+                                <td>DELA CRUZ, JUAN</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>Department: </td>
+                                <td>BUSINESS TECHNOLOGY DEPARTMENT</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>Due Date: </td>
+                                <td>MAY 25, 2025</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td><a href>Extend Date</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Reviewed By: </td>
+                                <td>DE LEON, JOSHUA</td>
+                                <td>April 28, 2025</td>
+                                <td>--</td>
+                                <td><a href>View Document</a></td>
+                            </tr>
+                            <tr>
+                                <td>Approved By: </td>
+                                <td>OCAMPO, VERON</td>
+                                <td>April 28, 2025</td>
+                                <td>--</td>
+                                <td><a href>View Document</a></td>
+                            </tr>
+                            <tr>
+                                <td>Checked By: </td>
+                                <td>CLAMOSA, ALAISA</td>
+                                <td>May 01, 2025</td>
+                                <td>No Job Order</td>
+                                <td><a href>View Job Order</a></td>
+                            </tr>
+                            <tr>
+                                <td>PO By: </td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>Released By: </td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>Received By: </td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="default_view" id="table_item"> 
+                        <h2> ITEM INFORMATION </h2>
+                        <table>
+                            <tr>
+                                <th>QTY </th>
+                                <th>DESCRIPTION</th>
+                                <th>STATUS</th>
+                                <th>REMARKS</th>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>COMPUTER MOUSE</td>
+                                <td>Approved</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>INK/TONER</td>
+                                <td>Approved</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>PRINTER</td>
+                                <td>Rejected</td>
+                                <td>Has existing printer</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+
+
+
+
+    </body>
+</html>
