@@ -144,11 +144,11 @@ button:hover {
 }
 
 .default_options {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .default_sort {
-  height: 25px;
+  height: 20px;
   width: 150px;
   font-size: 12px;
   margin-left: 10px;
@@ -176,6 +176,19 @@ button:hover {
   background-color: #7600a1;
 }
 
+.default_search_option {
+  height: 20px;
+  width: 150px;
+  font-size: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.default_search {
+  height: 20px;
+  width: 300px;
+  font-size: 12px;
+}
 
 /*-------------------- MODAL -----------------------------------*/
 
