@@ -185,9 +185,21 @@ button:hover {
 }
 
 .default_search {
+  padding-bottom: 10px;
+}
+
+.default_search input {
   height: 20px;
-  width: 300px;
+  width: 150px;
   font-size: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.default_search button, #search_button {
+  height: 20px;
+  width: 120px;
+  margin-left: 5px;
 }
 
 /*-------------------- MODAL -----------------------------------*/
@@ -637,6 +649,12 @@ button:hover {
   padding: 20px;
 }
 
+.report_bottom {
+  display: flex;
+}
+
+/* BAR GRAPH */
+
 .chart_view{
   --line-count: 10;
   --line-color: currentcolor;
@@ -644,7 +662,7 @@ button:hover {
   --item-gap: 2%;
   --item-default-color: #060606;
   
-  height: 10rem;
+  height: 9rem;
   display: grid;
   grid-auto-flow: column;
   gap: var(--item-gap);
@@ -654,6 +672,7 @@ button:hover {
   padding-block: var(--padding-block);
   position: relative;
   isolation: isolate;
+  margin-bottom: 10px;
 }
 
 .chart_view::after{
@@ -679,8 +698,201 @@ button:hover {
 .chart_view > .item > .label { inset: 100% 0 auto 0 }
 .chart_view > .item > .value { inset: auto 0 100% 0 }
 
+.chart_view .label {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* LINE GRAPH */
+
+.chart {
+    width: 500px;
+    height: 50px;
+    position: relative;
+}
+
+svg {
+    width: 100%;
+    height: 300px;
+}
+
+.grid-line {
+    stroke: #e0e0e0;
+    stroke-width: 1;
+}
+
+.axis-line {
+    stroke: #333;
+    stroke-width: 2;
+}
+
+.line-path-1 {
+    fill: none;
+    stroke: #006699;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.line-path-2 {
+    fill: none;
+    stroke: #ab004a;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.animate-line {
+    animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.dot-1 {
+    fill: #006699;
+    stroke: #fff;
+    stroke-width: 2;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+.dot-2 {
+    fill: #ab004a;
+    stroke: #fff;
+    stroke-width: 2;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.y-axis, .x-axis {
+    font-size: 12px;
+    color: #333;
+}
+
+.y-axis text {
+    text-anchor: end;
+}
+
+.x-axis text {
+    text-anchor: middle;
+}
+
+.legend {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+}
+
+.legend span {
+    margin-left: 10px;
+}
+
+.legend-color-1 {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #006699;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.legend-color-2 {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ab004a;
+    vertical-align: middle;
+    margin-right: 5px;
+}
 
 
+/* STACKED BAR GRAPH */
 
+.chart-container {
+    max-width: 500px;
+    margin-left: 100px;
+    
+}
+
+.bar-container {
+    margin-bottom: 25px;
+    width: 700px;
+    height: 30px;
+}
+
+.bar-label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    font-size: 12px;
+}
+
+.bar {
+    display: flex;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 0; /* Initial width */
+    animation: grow 1.5s ease-in-out forwards;
+}
+
+/* Segment colors */
+.segment-1 { background-color: #006699; }
+.segment-2 { background-color: #ab004a; }
+
+/* Keyframes for animation */
+@keyframes grow {
+    from { width: 0; }
+    to { width: var(--width); }
+}
+
+/* Segment widths for each category */
+.segment-1-cat1 { --width: 70%; }
+.segment-2-cat1 { --width: 30%; }
+
+.segment-1-cat2 { --width: 89%; }
+.segment-2-cat2 { --width: 11%; }
+
+.segment-1-cat3 { --width: 58%; }
+.segment-2-cat3 { --width: 42%; }
+
+.segment-1-cat4 { --width: 95%; }
+.segment-2-cat4 { --width: 5%; }
+
+.segment-1-cat5 { --width: 81%; }
+.segment-2-cat5 { --width: 29%; }
+
+/* Slight delay for each segment to create a staggered effect */
+.segment-2 { animation-delay: 0.4s; }
 
 

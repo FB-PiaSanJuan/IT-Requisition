@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="menu_topbar">
-            <p>Fully Booked IT Requisition</p>
+            <p>Fully Booked IT Requisition Tracker</p>
         </div>
 
         <div class="menu_sidebar">
@@ -44,16 +44,8 @@
                         <option value="Role">Role</option>
                         <option value="Status">Status</option>
                     </select>
-                    <label style="margin-left: 10px;"> SEARCH: </label>
-                    <select class="default_search_option">
-                        <option value="ID">ID</option>
-                        <option value="Name">Employee Name</option>
-                        <option value="Deparment">Deparment</option>
-                        <option value="Role">Role</option>
-                        <option value="Status">Status</option>
-                    </select>
-                    <input type="search" class="default_search" placeholder="Search By Keyword">
 
+                    <button id="search_button" onclick="showSearch()">ADVANCED SEARCH</button>
 
                     <div class="default_paging">
                         <button><</button>
@@ -63,6 +55,48 @@
                         <button class="default_button"> ADD USER </button>
                     </div>
 
+                </div>
+
+                <!--hidden search-->
+                <div class="default_search" style="display: none;" id="default_advanced_search">
+                    <h4 style="padding-bottom: 5px;">FIND USER ACCOUNT</h4>
+
+                    <label style="margin-left: 10px;"> EMPLOYEE NAME: </label>
+                    <input type="search" placeholder="Search By Keyword">
+
+                    <label style="margin-left: 10px;"> DEPARTMENT: </label>
+                    <select class="default_search_option">
+                        <option value="All">All</option>
+                        <option value="BT">Business Technology</option>
+                        <option value="PM">People Management</option>
+                        <option value="DS">Direct Sales</option>
+                        <option value="OP">Operations</option>
+                        <option value="MK">Marketing</option>
+                        <option value="PC">Procurement</option>
+                        <option value="WH">Warehouse</option>
+                        <option value="AT">Accounting</option>
+                        <option value="ECOM">ECOM</option>
+                    </select>
+
+                    <label style="margin-left: 10px;"> ROLE: </label>
+                    <select class="default_search_option">
+                        <option value="All">All</option>
+                        <option value="Admin">Administrator</option>
+                        <option value="IT">IT</option>
+                        <option value="Managers">Managers</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+
+                    <label style="margin-left: 10px;"> STATUS: </label>
+                    <select class="default_search_option">
+                        <option value="All">All</option>
+                        <option value="UV">Unverified</option>
+                        <option value="A">Active</option>
+                        <option value="IA">Inactive</option>
+                    </select>
+                    
+                    <button>SEARCH</button>
+                    
                 </div>
 
                 <table>
@@ -289,6 +323,14 @@
             function alertMessage(message) {
             alert(message);
             }
+        </script>
+
+        <script>
+        // Advanced Search
+        function showSearch() {
+            var T = document.getElementById("default_advanced_search");
+            T.style.display = "block";  // <-- Set it to block
+        }
         </script>
 
 

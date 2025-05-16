@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="menu_topbar">
-            <p>Fully Booked IT Requisition</p>
+            <p>Fully Booked IT Requisition Tracker</p>
         </div>
 
         <div class="menu_sidebar">
@@ -44,14 +44,8 @@
                         <option value="Department">Department</option>
                         <option value="Status">Status</option>
                     </select>
-                    <label style="margin-left: 10px;"> SEARCH: </label>
-                    <select class="default_search_option">
-                        <option value="Serial">Serial Number</option>
-                        <option value="Status">Status</option>
-                        <option value="Target Date">Target Date</option>
-                        <option value="Employee">Employee Name</option>
-                    </select>
-                    <input type="search" class="default_search" placeholder="Search By Keyword">
+
+                    <button id="search_button" onclick="showSearch()">ADVANCED SEARCH</button>
 
                     <div class="default_paging">
                         <button><</button>
@@ -62,12 +56,39 @@
                     </div>
                 </div>
 
+                <!--hidden search-->
+                <div class="default_search" style="display: none;" id="default_advanced_search">
+                    <h4 style="padding-bottom: 5px;">FIND REQUISITIONS</h4>
+                    <label style="margin-left: 10px;"> STATUS: </label>
+                    <select class="default_search_option">
+                        <option value="All">All</option>
+                        <option value="New">For Approval</option>
+                        <option value="PR">For PR</option>
+                        <option value="PO">For PO</option>
+                        <option value="Release">Released</option>
+                        <option value="Complete">Completed</option>
+                    </select>
+
+                    <label style="margin-left: 10px;"> SERIAL NUMBER: </label>
+                    <input type="search" placeholder="Search By Keyword">
+
+                    <label style="margin-left: 10px;"> EMPLOYEE NAME: </label>
+                    <input type="search" placeholder="Search By Keyword">
+
+                    <label style="margin-left: 10px;"> SEARCH: </label>
+                    <input type="date">
+                    
+                    <button>SEARCH</button>
+                    
+                </div>
+
+
                 <table>
                     <tr>
                         <th>SERIAL NUMBER</th>
                         <th>REQUESTED BY</th>
                         <th>DEPARTMENT</th>
-                        <th>DATE</th>
+                        <th>TARGET DATE</th>
                         <th>STATUS</th>
                         <th>ACTION</th>
                     </tr>
@@ -83,107 +104,90 @@
                     <tr>
                         <td>2025-000104</td>
                         <td>Doe, Jane</td>
-                        <td>Human Resource</td>
+                        <td>People Management</td>
                         <td>May 09, 2025</td>
-                        <td>COMPLETE</td>
+                        <td>COMPLETED</td>
                         <td><a href="details_2.html">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000105</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Sheeran, Ed</td>
+                        <td>Operations</td>
+                        <td>June 09, 2025</td>
+                        <td>FOR PR</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000106</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Grande, Ariana</td>
+                        <td>Direct Sales</td>
+                        <td>May 19, 2025</td>
+                        <td>RELEASED</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000107</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Doe, John</td>
+                        <td>Operations</td>
+                        <td>May 31, 2025</td>
+                        <td>FOR PO</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000108</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Swift, Taylor</td>
+                        <td>Accounting</td>
+                        <td>June 10, 2025</td>
+                        <td>FOR PR</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000109</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Chase, Annabeth</td>
+                        <td>Marketing</td>
+                        <td>May 28, 2025</td>
+                        <td>RELEASED</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000110</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Riordan, Rick</td>
+                        <td>Operations</td>
+                        <td>May 10, 2025</td>
+                        <td>RELEASED</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000111</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Jackson, Percy</td>
+                        <td>ECOM</td>
+                        <td>June 01, 2025</td>
+                        <td>FOR APPROVAL</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000112</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Everdeen, Katniss</td>
+                        <td>Marketing</td>
+                        <td>May 18, 2025</td>
+                        <td>FOR PO</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000113</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Hutchins, Aleli</td>
+                        <td>Warehouse</td>
+                        <td>May 31, 2025</td>
+                        <td>FOR PR</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2025-000120</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>2025-000121</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
-                    </tr>
-                    <tr>
-                        <td>2025-000122</td>
-                        <td>Dela Cruz, Juan</td>
-                        <td>Business Technology</td>
-                        <td>May 25, 2025</td>
-                        <td>ON-PO</td>
-                        <td><a href="">VIEW</a></td>
+                        <td>Mellark, Peeta</td>
+                        <td>Operations</td>
+                        <td>June 11, 2025</td>
+                        <td>FOR APPROVAL</td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
 
                 </table>
@@ -278,6 +282,14 @@
             function alertMessage(message) {
             alert(message);
             }
+        </script>
+
+        <script>
+        // Advanced Search
+        function showSearch() {
+            var T = document.getElementById("default_advanced_search");
+            T.style.display = "block";  // <-- Set it to block
+        }
         </script>
 
 

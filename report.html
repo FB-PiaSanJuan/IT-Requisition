@@ -15,7 +15,7 @@
     </head>
     <body>
         <div class="menu_topbar">
-            <p>Fully Booked IT Requisition</p>
+            <p>Fully Booked IT Requisition Tracker</p>
         </div>
 
         <div class="menu_sidebar">
@@ -35,27 +35,33 @@
 
         <div class="default_container">
             <div class="report_view">
-                <h1>TOP ITEMS REQUESTED</h1>
+                
+                <!-- BAR GRAPH -->
+
+                <div style="display: flex; margin: auto;">
+                <h2>MOST ITEM REQUESTED</h2>
+                <h3 style="align-self: center; margin-left: 10px;">(as of May 2025)</h3>
+                </div>
 
                 <div class="chart_view">
                 
                     <div class="item" style="--clr: #5EB344; --val: 80">
-                        <div class="label">KEYBOARD/MOUSE</div>
+                        <div class="label">KEYBOARD</div>
                         <div class="value">80%</div>
                     </div>
                     
                     <div class="item" style="--clr: #FCB72A; --val: 50">
-                        <div class="label">Label 2</div>
+                        <div class="label">MONITOR</div>
                         <div class="value">50%</div>
                     </div>
                     
                     <div class="item" style="--clr: #F8821A; --val: 100">
-                        <div class="label">TONER</div>
+                        <div class="label">MOUSE</div>
                         <div class="value">100%</div>
                     </div>
                     
                     <div class="item" style="--clr: #E0393E; --val: 15">
-                        <div class="label">Label 4</div>
+                        <div class="label">BARCODE SCANNER</div>
                         <div class="value">15%</div>
                     </div>
                     
@@ -65,16 +71,130 @@
                     </div>
                     
                     <div class="item" style="--clr: #069CDB; --val: 90">
-                        <div class="label">Label 6</div>
+                        <div class="label">PRINTER</div>
                         <div class="value">90%</div>
                     </div>
                     
                 </div>
+
+
+                <div class="report_bottom">
+
+                    <!-- LINE GRAPH -->
+                    <div class="chart">
+                        <h2> ITEMS REJECTED vs APPROVED </h2>
+                        <div class="legend">
+                            <span><span class="legend-color-1"></span>Approved</span>
+                            <span><span class="legend-color-2"></span>Rejected</span>
+                        </div>
+                        <svg>
+                            <!-- Grid lines -->
+                            <line class="grid-line" x1="50" y1="50" x2="550" y2="50" />
+                            <line class="grid-line" x1="50" y1="100" x2="550" y2="100" />
+                            <line class="grid-line" x1="50" y1="150" x2="550" y2="150" />
+                            <line class="grid-line" x1="50" y1="200" x2="550" y2="200" />
+
+                            <!-- Axes -->
+                            <line class="axis-line" x1="50" y1="250" x2="50" y2="0" />
+                            <line class="axis-line" x1="50" y1="250" x2="550" y2="250" />
+
+                            <!-- Y-axis labels -->
+                            <g class="y-axis">
+                                <text x="40" y="50">100</text>
+                                <text x="40" y="100">75</text>
+                                <text x="40" y="150">50</text>
+                                <text x="40" y="200">25</text>
+                                <text x="40" y="250">0</text>
+                            </g>
+
+                            <!-- X-axis labels -->
+                            <g class="x-axis">
+                                <text x="150" y="270">Jan</text>
+                                <text x="250" y="270">Feb</text>
+                                <text x="350" y="270">Mar</text>
+                                <text x="450" y="270">Apr</text>
+                            </g>
+
+                            <!-- Data line 1 -->
+                            <path class="line-path-1 animate-line" d="M50,100 L150,100 L250,50 L350,90 L450,80 L550,40" style="stroke-dasharray: 1000; stroke-dashoffset: 1000;" />
+
+                            <!-- Data line 2 -->
+                            <path class="line-path-2 animate-line" d="M50,200 L150,150 L250,180 L350,230 L450,130 L550,190" style="stroke-dasharray: 1000; stroke-dashoffset: 1000; animation-delay: 0.2s;" />
+
+                            <!-- Data points for Series 1 -->
+                            <circle class="dot-1" cx="50" cy="100" r="5" />
+                            <circle class="dot-1" cx="150" cy="100" r="5" />
+                            <circle class="dot-1" cx="250" cy="50" r="5" />
+                            <circle class="dot-1" cx="350" cy="90" r="5" />
+                            <circle class="dot-1" cx="450" cy="80" r="5" />
+                            <circle class="dot-1" cx="550" cy="40" r="5" />
+
+                            <!-- Data points for Series 2 -->
+                            <circle class="dot-2" cx="50" cy="200" r="5" />
+                            <circle class="dot-2" cx="150" cy="150" r="5" />
+                            <circle class="dot-2" cx="250" cy="180" r="5" />
+                            <circle class="dot-2" cx="350" cy="230" r="5" />
+                            <circle class="dot-2" cx="450" cy="130" r="5" />
+                            <circle class="dot-2" cx="550" cy="190" r="5" />
+                        </svg>
+                    </div>
+
+
+                    <!-- STACKED BAR GRAPH -->
+                    <div class="chart-container">
+                        <h2> REQUEST AVERAGE TIME FULFILLMENT </h2>
+                         <div style="padding-bottom: 5px;">
+                            <span style="margin-right: 10px;"><span class="legend-color-1"></span>On-Time</span>
+                            <span style="margin-right: 10px;"><span class="legend-color-2"></span>Delayed</span>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar-label">FOR APPROVAL</div>
+                            <div class="bar">
+                                <div class="segment segment-1 segment-1-cat1">70%</div>
+                                <div class="segment segment-2 segment-2-cat1">30%</div>
+                            </div>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar-label">FOR PR</div>
+                            <div class="bar">
+                                <div class="segment segment-1 segment-1-cat2">89%</div>
+                                <div class="segment segment-2 segment-2-cat2">11%</div>
+                            </div>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar-label">FOR PO</div>
+                            <div class="bar">
+                                <div class="segment segment-1 segment-1-cat3">58%</div>
+                                <div class="segment segment-2 segment-2-cat3">42%</div>
+                            </div>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar-label">RELEASE</div>
+                            <div class="bar">
+                                <div class="segment segment-1 segment-1-cat4">95%</div>
+                                <div class="segment segment-2 segment-2-cat4">5%</div>
+                            </div>
+                        </div>
+
+                        <div class="bar-container">
+                            <div class="bar-label">COMPLETED</div>
+                            <div class="bar">
+                                <div class="segment segment-1 segment-1-cat5">89%</div>
+                                <div class="segment segment-2 segment-2-cat5">21%</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
             </div>
-
-
-
-
 
         </div>        
 
