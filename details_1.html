@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> IT REQUISITION </title>
+        <title> IT REQUISITION TRACKER </title>
         <link rel="stylesheet" href="main_style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
                 <img src="images/user.png">
                 <h2>PIA</h2>
                 <h4>ADMINISTRATOR</h3>
-                <button>LOGOUT</button>
+                <button onclick="location.href='login.html'">LOGOUT</button>
             </div>
         </div>
 
@@ -176,7 +176,7 @@
                     <label> REQUESTED BY: Dela Cruz, Juan </label> <br> <br>
                     <label> DATE REQUESTED: May 01, 2025 </label> <br> <br>
                     <label> AUTHORIZED BY: Doe, John </label> <br> <br>
-                    <label> DUE DATE: May 28, 2025 </label> <br> <br>
+                    <label> TARGET DATE: May 28, 2025 </label> <br> <br>
 
                     <div class="default_view"> 
                         <h2 style="margin: 0;"> ITEM INFORMATION </h2>
@@ -215,11 +215,20 @@
 
                     <br><br>
                     <label> NOTE: </label> <br> <input type="text"><br><br>
-                    <label> APPROVED BY: </label> <br> <input type="text"><br>
+                    <label> APPROVED BY: * </label> <br>
+                    <select class="requisition_options">
+                        <option value="0"></option>
+                        <option value="1">Dela Fuerte, Raffy</option>
+                        <option value="2">Ocampo, Veron</option>
+                        <option value="3">Panolino, Rizza</option>
+                        <option value="4">De Leon, Yheng</option>
+                        <option value="5">Clamosa, Alaisa</option>
+                    </select><br><br>
+                    <label> UPLOAD THE E-SIGNATURE * </label> <br>
                     <input type="file"> 
                     <br>
 
-                    <a href="" onclick="alertMessage('Your request has been submitted.')"> UPDATE STATUS </a> <br>
+                    <a href="" onclick="alertMessage('Requisition has been approved.\nChanging status to FOR PR.')"> UPDATE STATUS </a> <br>
                 </div>
 
             </div>
@@ -254,6 +263,11 @@
             }
         </script>
 
+        <script>
+            function alertMessage(message) {
+            alert(message);
+            }
+        </script>
 
 
 

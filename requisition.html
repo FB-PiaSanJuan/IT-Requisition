@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> IT REQUISITION </title>
+        <title> IT REQUISITION TRACKER </title>
         <link rel="stylesheet" href="main_style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
                 <img src="images/user.png">
                 <h2>PIA</h2>
                 <h4>ADMINISTRATOR</h3>
-                <button>LOGOUT</button>
+                <button onclick="location.href='login.html'">LOGOUT</button>
             </div>
         </div>
 
@@ -75,7 +75,7 @@
                     <label style="margin-left: 10px;"> EMPLOYEE NAME: </label>
                     <input type="search" placeholder="Search By Keyword">
 
-                    <label style="margin-left: 10px;"> SEARCH: </label>
+                    <label style="margin-left: 10px;"> TARGET DATE: </label>
                     <input type="date">
                     
                     <button>SEARCH</button>
@@ -203,23 +203,36 @@
 
                 <h2> IT Requisition Form</h2>
                 <div class="requisition_form">
-                    <label> REQUESTED BY: San Juan, Pia Laica </label> <br> <br>
+                    <label> REQUESTED BY: San Juan, Pia Laica </label> <br> <br> 
+                    <label> UPLOAD YOUR E-SIGNATURE * </label> <br> 
+                    <input type="file"> 
+                    <br><br>
 
-                    <label> DATE: </label> <br> <input type="date" date="MM-DD-YYYY"> <br> <br>
+                    <label> TARGET DATE: * </label> <br> <input type="date" date="MM-DD-YYYY"> <br> <br>
                     <label> ITEM(S) TO REQUEST: </label> <br> 
-                    <input type="text" placeholder="Item Description"> <br>
-                    <input type="number" placeholder="Qty"> <br>
+                    <input type="text" placeholder="Item Description *"> <br>
+                    <input type="number" placeholder="Qty *"> <br>
+                    <input type="text" placeholder="Purpose/Reason"> <br>
 
                     <button class="add-button" onclick="addFn()">ADD ITEM</button>
                     <div id="inputFields"></div>
 
                     <br><br>
                     <label> NOTE: </label> <br> <input type="text"><br><br>
-                    <label> AUTHORIZED BY: </label> <br> <input type="text"><br>
+                    <label> AUTHORIZED BY: * </label> <br> 
+                    <select class="requisition_options">
+                        <option value="0"></option>
+                        <option value="1">Dela Fuerte, Raffy</option>
+                        <option value="2">Ocampo, Veron</option>
+                        <option value="3">Panolino, Rizza</option>
+                        <option value="4">De Leon, Yheng</option>
+                        <option value="5">Clamosa, Alaisa</option>
+                    </select><br><br>
+                    <label> UPLOAD THE E-SIGNATURE * </label> <br>
                     <input type="file"> 
                     <br>
 
-                    <a href="" onclick="alertMessage('Your request has been submitted.')"> SUBMIT REQUEST </a> <br>
+                    <a href="" onclick="alertMessage('Your request has been submitted.\nPlease take note of your serial number to track your requisition. \nSERIAL NUMBER #2025-000294')"> SUBMIT REQUEST </a> <br>
                 </div>
 
             </div>
@@ -262,7 +275,7 @@
             const wrapper = document.createElement("div");
             const iFeild = document.createElement("input");
             iFeild.setAttribute("type", "text");
-            iFeild.setAttribute("placeholder", "Item Description");
+            iFeild.setAttribute("placeholder", "Item Description *");
             iFeild.classList.add("input-field");
             wrapper.appendChild(iFeild);
             divEle.appendChild(wrapper);
@@ -271,10 +284,19 @@
             const wrapper2 = document.createElement("div");
             const iFeild2 = document.createElement("input");
             iFeild2.setAttribute("type", "number");
-            iFeild2.setAttribute("placeholder", "Qty");
+            iFeild2.setAttribute("placeholder", "Qty *");
             iFeild2.classList.add("input-field");
             wrapper.appendChild(iFeild2);
             divEle.appendChild(wrapper2);
+
+            const divEle3 = document.getElementById("inputFields");
+            const wrapper3 = document.createElement("div");
+            const iFeild3 = document.createElement("input");
+            iFeild3.setAttribute("type", "text");
+            iFeild3.setAttribute("placeholder", "Purpose/Reason");
+            iFeild3.classList.add("input-field");
+            wrapper.appendChild(iFeild3);
+            divEle.appendChild(wrapper3);
         }
         </script>
 

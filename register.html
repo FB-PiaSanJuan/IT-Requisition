@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> REGISTER </title>
+        <title> IT REQUISITION TRACKER </title>
         <link rel="stylesheet" href="main_style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,26 @@
         <div class="register_container">
             <h2> Request an Account </h2>
             
-            <label> Name: </label> <br> <input type="text" placeholder="FULL NAME"> <br> 
+            <label> First Name: </label> <br> <input type="text" placeholder="FIRST NAME"> <br> 
+            <label> Last Name: </label> <br> <input type="text" placeholder="LAST NAME"> <br> 
             <label> Work Title: </label> <br> <input type="text" placeholder="TITLE"> <br>
-            <label> Department: </label> <br> <input type="text" placeholder="DEPARTMENT"> <br>
+            <label> Department: </label> <br> 
+            <select class="register_options">
+                <option value="NONE"></option>
+                <option value="BT">Business Technology</option>
+                <option value="PM">People Management</option>
+                <option value="DS">Direct Sales</option>
+                <option value="OP">Operations</option>
+                <option value="MK">Marketing</option>
+                <option value="PC">Procurement</option>
+                <option value="WH">Warehouse</option>
+                <option value="AT">Accounting</option>
+                <option value="ECOM">ECOM</option>
+            </select> <br>
             <label> Email: </label> <br> <input type="email" placeholder="COMPANY EMAIL"> <br>
             <label> Password: </label> <br> <input type="password" placeholder="ACCOUNT PASSWORD"> <br>
             <label> Confirm Password: </label> <br> <input type="password" placeholder="CONFIRM PASSWORD"> <br>
-            <a class="register_button" href="index.html"> REGISTER </a> <br>
+            <a class="register_button" href="user_home.html"> REGISTER </a> <br>
 
             <p> Already have an account? Login <a class="register_link" href="login.html"> here. </a> </p>
             

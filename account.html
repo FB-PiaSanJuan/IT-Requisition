@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> IT REQUISITION </title>
+        <title> IT REQUISITION TRACKER </title>
         <link rel="stylesheet" href="main_style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
                 <img src="images/user.png">
                 <h2>PIA</h2>
                 <h4>ADMINISTRATOR</h3>
-                <button>LOGOUT</button>
+                <button onclick="location.href='login.html'">LOGOUT</button>
             </div>
         </div>
 
@@ -82,9 +82,9 @@
                     <select class="default_search_option">
                         <option value="All">All</option>
                         <option value="Admin">Administrator</option>
-                        <option value="IT">IT</option>
-                        <option value="Managers">Managers</option>
-                        <option value="Staff">Staff</option>
+                        <option value="Approver">Approver</option>
+                        <option value="Reviewer">Reviewer</option>
+                        <option value="User">User</option>
                     </select>
 
                     <label style="margin-left: 10px;"> STATUS: </label>
@@ -117,7 +117,7 @@
                         <td>Chief Technology Officer</td>
                         <td>Administrator</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -135,88 +135,88 @@
                         <td>Software Development Team Lead</td>
                         <td>Administrator</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>De Leon, Yheng</td>
                         <td>Business Technology Department</td>
                         <td>Project Manager</td>
-                        <td>Administrator</td>
+                        <td>Approver</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Talamisan, Aljon</td>
                         <td>Business Technology Deparment</td>
                         <td>Software Development Engineer</td>
-                        <td>IT Reviewer</td>
+                        <td>User</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>San Juan, Pia</td>
                         <td>Business Technology Department</td>
                         <td>Software Development Engineer</td>
-                        <td>IT Reviewer</td>
+                        <td>User</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>Bueza, Michael</td>
                         <td>Business Technology Department</td>
                         <td>Business Intelligence Team Lead</td>
-                        <td>IT Reviewer</td>
+                        <td>User</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>Habana, Enna</td>
                         <td>Business Technology Department</td>
                         <td>Application Support Engineer</td>
-                        <td>IT Reviewer</td>
+                        <td>Reviewer</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>Muyco, Inigo</td>
                         <td>Business Technology Department</td>
                         <td>Business Intelligence Officer</td>
-                        <td>IT Reviewer</td>
+                        <td>User</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Clamosa, Alaisa</td>
                         <td>Business Technology Deparment</td>
                         <td>Department Assistant</td>
-                        <td>IT Checker</td>
+                        <td>Approver</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>11</td>
                         <td>De Leon, Joshua</td>
                         <td>Business Technology Deparment</td>
                         <td>Technical Support Engineer</td>
-                        <td>IT Reviewer</td>
+                        <td>Reviewer</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
                     <tr>
                         <td>12</td>
                         <td>Santos, Xander</td>
                         <td>Business Technology Deparment</td>
                         <td>Technical Support Engineer</td>
-                        <td>IT Reviewer</td>
+                        <td>Reviewer</td>
                         <td>Active</td>
-                        <td><a href="">VIEW</a></td>
+                        <td><a href="#">VIEW</a></td>
                     </tr>
 
 
@@ -239,8 +239,12 @@
                                 <th>VALUE</th>
                             </tr>
                             <tr>
-                                <td>NAME:</td>
-                                <td><input type="text" value="Veron Ocampo"></td>
+                                <td>FIRST NAME:</td>
+                                <td><input type="text" value="Veron"></td>
+                            </tr>
+                            <tr>
+                                <td>LAST NAME:</td>
+                                <td><input type="text" value="Ocampo"></td>
                             </tr>
                             <tr>
                                 <td>TILE:</td>
@@ -249,18 +253,25 @@
                             <tr>
                                 <td>DEPARTMENT:</td>
                                 <td><select>
-                                    <option value="Business Technology"> Business Technology Department </option>
-                                    <option value="People Management"> People Management </option>
-                                    <option value="Direct Sales"> Direct Sales </option>
+                                    <option value="All">All</option>
+                                    <option value="BT">Business Technology</option>
+                                    <option value="PM">People Management</option>
+                                    <option value="DS">Direct Sales</option>
+                                    <option value="OP">Operations</option>
+                                    <option value="MK">Marketing</option>
+                                    <option value="PC">Procurement</option>
+                                    <option value="WH">Warehouse</option>
+                                    <option value="AT">Accounting</option>
+                                    <option value="ECOM">ECOM</option>
                                 </select></td>
                             </tr>
                             <tr>
                                 <td>ROLE:</td>
                                 <td><select>
                                     <option value="Administrator"> Administrator </option>
-                                    <option value="IT Reviewer"> IT Reviewer </option>
-                                    <option value="IT Checker"> IT Checker </option>
-                                    <option value="Request Encoder"> Request Encoder </option>
+                                    <option value="Approver"> Approver </option>
+                                    <option value="Reviewer"> Reviewer </option>
+                                    <option value="User"> User </option>
                                 </select></td>
                             </tr>
                             <tr>

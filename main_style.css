@@ -429,6 +429,12 @@ button:hover {
   font-size: 12px;
   margin-top: 5px;
 }
+.requisition_options {
+  padding: 5px;
+  width: 100%;
+  font-size: 12px;
+  margin-top: 5px;
+}
 
 .requisition_form label {
   font-size: 13px;
@@ -595,7 +601,7 @@ button:hover {
     backdrop-filter: blur(10px);
 }
 
-.register_container input, .register_button {
+.register_container input, .register_button, .register_options {
     width: 100%;
     height: 2.5rem;
     border-radius: 0.3rem;
