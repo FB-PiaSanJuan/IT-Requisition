@@ -51,8 +51,8 @@
 
                     <div class="details_status_info">
                         <h3> SERIAL #2025-000103</h3>
-                        <h2> CURRENT STATUS: ON-PO </h2>
-                        <button> UPDATE STATUS </button>
+                        <h2> CURRENT STATUS: FOR APPROVAL </h2>
+                        <button id="modal_button"> UPDATE STATUS </button>
                     </div>
                 </div>
 
@@ -72,21 +72,21 @@
                             </tr>
                             <tr>
                                 <td>Employee Name: </td>
-                                <td>DELA CRUZ, JUAN</td>
+                                <td>Dela Cruz, Juan</td>
                                 <td>--</td>
                                 <td>--</td>
                                 <td>--</td>
                             </tr>
                             <tr>
                                 <td>Department: </td>
-                                <td>BUSINESS TECHNOLOGY DEPARTMENT</td>
+                                <td>Business Technology Deparment</td>
                                 <td>--</td>
                                 <td>--</td>
                                 <td>--</td>
                             </tr>
                             <tr>
                                 <td>Due Date: </td>
-                                <td>MAY 25, 2025</td>
+                                <td>May 25, 2025</td>
                                 <td>--</td>
                                 <td>--</td>
                                 <td><a href>Extend Date</a></td>
@@ -94,24 +94,24 @@
 
                             <tr>
                                 <td>Reviewed By: </td>
-                                <td>DE LEON, JOSHUA</td>
+                                <td>De Leon, Joshua</td>
                                 <td>April 28, 2025</td>
                                 <td>--</td>
                                 <td><a href>View Document</a></td>
                             </tr>
                             <tr>
                                 <td>Approved By: </td>
-                                <td>OCAMPO, VERON</td>
+                                <td>Ocampo, Veron</td>
                                 <td>April 28, 2025</td>
                                 <td>--</td>
                                 <td><a href>View Document</a></td>
                             </tr>
                             <tr>
                                 <td>Checked By: </td>
-                                <td>CLAMOSA, ALAISA</td>
-                                <td>May 01, 2025</td>
-                                <td>No Job Order</td>
-                                <td><a href>View Job Order</a></td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
                             </tr>
                             <tr>
                                 <td>Released By: </td>
@@ -163,6 +163,98 @@
 
             </div>
         </div>        
+
+        <!-- The Modal -->
+        <div id="modal_id" class="modal_view">
+
+            <!-- Modal content -->
+            <div class="modal_content" style="width: 50%;">
+                <span class="modal_close">&times;</span>
+
+                <h2> IT Requisition Form</h2>
+                <div class="requisition_form">
+                    <label> REQUESTED BY: Dela Cruz, Juan </label> <br> <br>
+                    <label> DATE REQUESTED: May 01, 2025 </label> <br> <br>
+                    <label> AUTHORIZED BY: Doe, John </label> <br> <br>
+                    <label> DUE DATE: May 28, 2025 </label> <br> <br>
+
+                    <div class="default_view"> 
+                        <h2 style="margin: 0;"> ITEM INFORMATION </h2>
+                        <label> Check items to approve.</label>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>QTY </th>
+                                <th>DESCRIPTION</th>
+                                <th>REMARKS</th>
+                                <th>ACTION</th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" style="margin: 2px;"></td>
+                                <td>2</td>
+                                <td>COMPUTER MOUSE</td>
+                                <td>--</td>
+                                <td style="text-decoration: underline;">EDIT REMARKS</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" style="margin: 2px;"></td>
+                                <td>5</td>
+                                <td>INK/TONER</td>
+                                <td>--</td>
+                                <td style="text-decoration: underline;">EDIT REMARKS</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" style="margin: 2px;"></td>
+                                <td>1</td>
+                                <td>PRINTER</td>
+                                <td>Has existing printer</td>
+                                <td style="text-decoration: underline;">EDIT REMARKS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <br><br>
+                    <label> NOTE: </label> <br> <input type="text"><br><br>
+                    <label> APPROVED BY: </label> <br> <input type="text"><br>
+                    <input type="file"> 
+                    <br>
+
+                    <a href="" onclick="alertMessage('Your request has been submitted.')"> UPDATE STATUS </a> <br>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("modal_id");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("modal_button");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("modal_close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+        </script>
+
+
 
 
 

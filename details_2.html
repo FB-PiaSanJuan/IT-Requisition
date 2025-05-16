@@ -52,7 +52,7 @@
                     <div class="details_status_info">
                         <h3> SERIAL #2025-000103</h3>
                         <h2> CURRENT STATUS: COMPLETED </h2>
-                        <button> UPDATE STATUS </button>
+                        <button id="modal_button"> UPDATE STATUS </button>
                     </div>
                 </div>
 
@@ -72,14 +72,14 @@
                             </tr>
                             <tr>
                                 <td>Employee Name: </td>
-                                <td>DOE, JANE</td>
+                                <td>Doe, Jane</td>
                                 <td>--</td>
                                 <td>--</td>
                                 <td>--</td>
                             </tr>
                             <tr>
                                 <td>Department: </td>
-                                <td>Human Resource</td>
+                                <td>People Management</td>
                                 <td>--</td>
                                 <td>--</td>
                                 <td>--</td>
@@ -101,20 +101,20 @@
                             </tr>
                             <tr>
                                 <td>Approved By: </td>
-                                <td>OCAMPO, VERON</td>
+                                <td>Ocampo, Veron</td>
                                 <td>April 31, 2025</td>
                                 <td>--</td>
                                 <td><a href>View Document</a></td>
                             </tr>
                             <tr>
                                 <td>Checked By: </td>
-                                <td>CLAMOSA, ALAISA</td>
+                                <td>Clamosa, Alaisa</td>
                                 <td>May 03, 2025</td>
                                 <td>--</td>
                                 <td><a href>View Job Order</a></td>
                             </tr>
                             <tr>
-                                <td>Released By: </td>
+                                <td>Release By: </td>
                                 <td>Santos, Xander</td>
                                 <td>May 07, 2025</td>
                                 <td>Received By John Doe</td>
@@ -153,6 +153,46 @@
         </div>        
 
 
+        <!-- The Modal -->
+        <div id="modal_id" class="modal_view">
+
+            <!-- Modal content -->
+            <div class="modal_content">
+                <span class="modal_close">&times;</span>
+
+                <h2 class="information_title"> INFORMATION </h2>
+                <h3> The requisition has been completed. <br> Status cannot be changed. </h3>
+            </div>
+
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("modal_id");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("modal_button");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("modal_close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+        </script>
 
 
     </body>
